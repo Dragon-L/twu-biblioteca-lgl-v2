@@ -1,17 +1,21 @@
 package com.twu.biblioteca.controller.shell;
 
+import com.twu.biblioteca.model.Account;
+
 import java.util.Map;
 
 public class Router {
     private MyCommand rootCommand;
-
     private Map<String,MyCommand> originMapper;
     private Map<String,MyCommand> currentMapper;
+
+    private Account user;
 
     public Router(Map<String,MyCommand> mapper,MyCommand rootCommand){
         this.originMapper = mapper;
         this.currentMapper = mapper;
         this.rootCommand = rootCommand;
+        user = null;
     }
 
 
@@ -27,5 +31,13 @@ public class Router {
 
     public String excuteRootCommand(){
         return rootCommand.excute(this);
+    }
+
+    public Account getUser(){
+        return user;
+    }
+
+    public void setUser(Account user){
+        this.user = user;
     }
 }

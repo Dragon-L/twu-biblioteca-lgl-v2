@@ -8,7 +8,8 @@ public class MainMenuOptions {
 
     public MainMenuOptions(){
         this.options = new ArrayList<String>();
-        options.add("List Book");
+        options.add("List Books");
+        options.add("List Movies");
         options.add("Quit");
     }
 
