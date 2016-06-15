@@ -15,6 +15,22 @@ public class ReturnBookCommand implements MyCommand{
     }
 
     public String excute(Router router){
+        if (router.getUser() == null){
+            String result = "";
+            result += String.format(" *********************************************************\n");
+            result += String.format(" *                Please Login First!                    *\n");
+            result += String.format(" *********************************************************\n");
+            result += String.format(" *                                1.Return the MainMenu  *\n");
+            result += String.format(" *********************************************************\n");
+            router.setCurrentMapper(mapper);
+            return result;
+        }else {
+            return excuteReturnBook(router);
+        }
+
+    }
+
+    public String excuteReturnBook(Router router){
         String result = "";
         System.out.print(" *********************************************************\n");
         System.out.print(" *          Please input the id  of book                 *\n");
