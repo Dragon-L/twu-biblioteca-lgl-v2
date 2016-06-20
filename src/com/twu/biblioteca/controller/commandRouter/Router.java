@@ -1,5 +1,6 @@
-package com.twu.biblioteca.controller.shell;
+package com.twu.biblioteca.controller.commandRouter;
 
+import com.twu.biblioteca.controller.command.MyCommand;
 import com.twu.biblioteca.model.Account;
 
 import java.util.Map;
@@ -30,7 +31,7 @@ public class Router {
     public void setOriginMapper(){ currentMapper = originMapper; }
 
     public String excuteRootCommand(){
-        return rootCommand.excute(this);
+        return rootCommand.execute(this);
     }
 
     public Account getUser(){

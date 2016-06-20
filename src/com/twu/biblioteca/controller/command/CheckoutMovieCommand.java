@@ -1,5 +1,6 @@
-package com.twu.biblioteca.controller.shell;
+package com.twu.biblioteca.controller.command;
 
+import com.twu.biblioteca.controller.commandRouter.Router;
 import com.twu.biblioteca.controller.core.MovieController;
 
 import java.util.Map;
@@ -15,7 +16,7 @@ public class CheckoutMovieCommand implements MyCommand {
         this.mapper = mapper;
     }
 
-    public String excute(Router router){
+    public String execute(Router router){
         String result = "";
         System.out.print(" *********************************************************\n");
         System.out.print(" *          Please input the id  of movie                *\n");

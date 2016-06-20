@@ -1,5 +1,6 @@
-package com.twu.biblioteca.controller.shell;
+package com.twu.biblioteca.controller.command;
 
+import com.twu.biblioteca.controller.commandRouter.Router;
 import com.twu.biblioteca.controller.core.BookController;
 
 import java.util.Map;
@@ -15,7 +16,7 @@ public class CheckoutBookCommand implements MyCommand {
         this.mapper = mapper;
     }
 
-    public String excute(Router router){
+    public String execute(Router router){
         if (router.getUser() == null){
             String result = "";
             result += String.format(" *********************************************************\n");

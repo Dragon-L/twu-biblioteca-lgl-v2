@@ -1,10 +1,9 @@
-package com.twu.biblioteca.controller.shell;
+package com.twu.biblioteca.controller.command;
 
+import com.twu.biblioteca.controller.commandRouter.Router;
 import com.twu.biblioteca.model.Account;
 import com.twu.biblioteca.model.Accounts;
-import com.twu.biblioteca.model.Book;
 
-import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 
@@ -19,7 +18,7 @@ public class AccountCommand implements MyCommand {
     }
 
 
-    public String excute(Router router){
+    public String execute(Router router){
         if (router.getUser() == null){
             return excuteLogin(router);
         }else {

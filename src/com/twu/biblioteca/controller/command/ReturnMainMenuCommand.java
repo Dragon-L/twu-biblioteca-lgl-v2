@@ -1,5 +1,6 @@
-package com.twu.biblioteca.controller.shell;
+package com.twu.biblioteca.controller.command;
 
+import com.twu.biblioteca.controller.commandRouter.Router;
 import com.twu.biblioteca.controller.core.MainMenu;
 
 public class ReturnMainMenuCommand implements MyCommand{
@@ -9,7 +10,7 @@ public class ReturnMainMenuCommand implements MyCommand{
         this.mainMenu = mainMenu;
     }
 
-    public String excute(Router router){
+    public String execute(Router router){
         String result = "";
         result += String.format(" *********************************************************\n");
         result += String.format(" *                       MainMenu                        *\n");
